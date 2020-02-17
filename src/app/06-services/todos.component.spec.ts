@@ -22,9 +22,8 @@ describe('TodosComponent', () => {
   });
 
   it('should call the server to save the changes when a new todo item is added', () => {
-    let spy = spyOn(service, 'add').and.callFake(() => {
-      return empty();
-    });
+    let value = { id: '1'}
+    let spy = spyOn(service, 'add').and.returnValue(of(value));
 
     component.add();
 
