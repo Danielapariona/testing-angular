@@ -2,7 +2,7 @@ import { TodoService } from './todo.service';
 import { OnInit } from '@angular/core';
 
 export class TodosComponent implements OnInit {
-  todos: any;
+  todos: any = [];
   message;
 
   constructor(private service: TodoService) { }
